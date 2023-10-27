@@ -41,8 +41,8 @@ Go to View All Orders and Verify that user got added
 #   Using Panda code--------------------------------
     #@{pandadata}=       Panda Table     ${tabledata}
     @{pandadata}=      Panda CommonFunction        ${tabledata}     ${COL_NAME}
-#    Log to console      ${pandadata}
-#    list should contain value       ${pandadata}        ${VALUE}
+    Log to console      ${pandadata}
+    list should contain value       ${pandadata}        ${VALUE}
 #   End Panda code--------------------------------
     @{MatchingString}=   Get Matching String     ${VALUE}    @{pandadata}
 
