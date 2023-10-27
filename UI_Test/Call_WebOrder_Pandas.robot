@@ -44,7 +44,7 @@ Go to View All Orders and Verify that user got added
     Log to console      ${pandadata}
     list should contain value       ${pandadata}        ${VALUE}
 #   End Panda code--------------------------------
-    @{MatchingString}=   Get Matching String     ${VALUE}    @{pandadata}
+#    @{MatchingString}=   Get Matching String     ${VALUE}    @{pandadata}
 
 Logout and Close Browser at end
     Click Link      Logout
