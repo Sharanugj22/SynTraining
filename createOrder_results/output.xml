@@ -1,337 +1,96 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.12.0 on win32)" generated="20231028 09:34:05.960" rpa="false" schemaversion="4">
-<suite id="s1" name="Select Checkbox BasedOn MatchingPattern" source="C:\Users\Sharanu\PycharmProjects\SynTraining\UI_Test\Select_Checkbox_BasedOn_MatchingPattern.robot">
-<test id="s1-t1" name="Login to WebOrder with valid credentials" line="12">
+<robot generator="Robot 6.1.1 (Python 3.12.0 on win32)" generated="20231028 10:02:36.155" rpa="false" schemaversion="4">
+<suite id="s1" name="IfElseDemo" source="C:\Users\Sharanu\PycharmProjects\SynTraining\UI_Test\IfElseDemo.robot">
+<test id="s1-t1" name="Launch OrangeHRM Login Page" line="6">
 <kw name="Open Browser" library="SeleniumLibrary">
-<arg>http://secure.smartbearsoftware.com/samples/TestComplete11/WebOrders/Login.aspx</arg>
-<arg>firefox</arg>
+<arg>https://www.saucedemo.com/</arg>
+<arg>ff</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20231028 09:34:06.157" level="INFO">Opening browser 'firefox' to base url 'http://secure.smartbearsoftware.com/samples/TestComplete11/WebOrders/Login.aspx'.</msg>
-<status status="PASS" starttime="20231028 09:34:06.157" endtime="20231028 09:34:13.275"/>
+<msg timestamp="20231028 10:02:36.454" level="INFO">Opening browser 'ff' to base url 'https://www.saucedemo.com/'.</msg>
+<status status="PASS" starttime="20231028 10:02:36.454" endtime="20231028 10:02:43.044"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231028 10:02:43.066" endtime="20231028 10:02:43.075"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>name=ctl00$MainContent$username</arg>
-<arg>Tester</arg>
+<arg>id=user-name</arg>
+<arg>standard_user</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231028 09:34:13.283" level="INFO">Typing text 'Tester' into text field 'name=ctl00$MainContent$username'.</msg>
-<status status="PASS" starttime="20231028 09:34:13.281" endtime="20231028 09:34:13.344"/>
+<msg timestamp="20231028 10:02:43.081" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<status status="PASS" starttime="20231028 10:02:43.081" endtime="20231028 10:02:43.207"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>name=ctl00$MainContent$password</arg>
-<arg>test</arg>
+<arg>id=password</arg>
+<arg>secret_sauce</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231028 09:34:13.360" level="INFO">Typing text 'test' into text field 'name=ctl00$MainContent$password'.</msg>
-<status status="PASS" starttime="20231028 09:34:13.344" endtime="20231028 09:34:13.392"/>
+<msg timestamp="20231028 10:02:43.212" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
+<status status="PASS" starttime="20231028 10:02:43.212" endtime="20231028 10:02:43.272"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
-<arg>name=ctl00$MainContent$login_button</arg>
+<arg>id=login-button</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20231028 09:34:13.392" level="INFO">Clicking button 'name=ctl00$MainContent$login_button'.</msg>
-<status status="PASS" starttime="20231028 09:34:13.392" endtime="20231028 09:34:16.186"/>
+<msg timestamp="20231028 10:02:43.273" level="INFO">Clicking button 'id=login-button'.</msg>
+<status status="PASS" starttime="20231028 10:02:43.272" endtime="20231028 10:02:43.558"/>
 </kw>
-<kw name="Page Should Contain Link" library="SeleniumLibrary">
-<arg>Logout</arg>
-<doc>Verifies link identified by ``locator`` is found from current page.</doc>
-<msg timestamp="20231028 09:34:16.186" level="INFO">Current page contains link 'Logout'.</msg>
-<status status="PASS" starttime="20231028 09:34:16.186" endtime="20231028 09:34:16.186"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>get location</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20231028 09:34:16.186" endtime="20231028 09:34:16.186"/>
-</kw>
-<tag>DEBUG</tag>
-<status status="PASS" starttime="20231028 09:34:06.157" endtime="20231028 09:34:16.202"/>
-</test>
-<test id="s1-t2" name="Create Order and Verify order got generated" line="24">
-<for flavor="IN RANGE">
-<var>${i}</var>
-<value>2</value>
-<iter>
-<var name="${i}">0</var>
-<kw name="Click Link" library="SeleniumLibrary">
-<arg>Order</arg>
-<doc>Clicks a link identified by ``locator``.</doc>
-<msg timestamp="20231028 09:34:16.202" level="INFO">Clicking link 'Order'.</msg>
-<status status="PASS" starttime="20231028 09:34:16.202" endtime="20231028 09:34:16.993"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>ctl00_MainContent_fmwOrder_txtQuantity</arg>
-<arg>2</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231028 09:34:16.999" level="INFO">Typing text '2' into text field 'ctl00_MainContent_fmwOrder_txtQuantity'.</msg>
-<status status="PASS" starttime="20231028 09:34:16.998" endtime="20231028 09:34:17.080"/>
-</kw>
-<kw name="Generate random numbers">
-<var>${Random_string}</var>
-<kw name="Generate Random String" library="String">
-<var>${Random_Number}</var>
-<arg>8</arg>
-<arg>0123456789</arg>
-<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
-<msg timestamp="20231028 09:34:17.080" level="INFO">${Random_Number} = 16649191</msg>
-<status status="PASS" starttime="20231028 09:34:17.080" endtime="20231028 09:34:17.080"/>
-</kw>
-<msg timestamp="20231028 09:34:17.080" level="INFO">${Random_string} = 16649191</msg>
-<status status="PASS" starttime="20231028 09:34:17.080" endtime="20231028 09:34:17.080"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>XPATH://input[@id='ctl00_MainContent_fmwOrder_txtName']</arg>
-<arg>${customer_name}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231028 09:34:17.080" level="INFO">Typing text 'abcd' into text field 'XPATH://input[@id='ctl00_MainContent_fmwOrder_txtName']'.</msg>
-<status status="PASS" starttime="20231028 09:34:17.080" endtime="20231028 09:34:17.104"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id:ctl00_MainContent_fmwOrder_TextBox2</arg>
-<arg>MG#123</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231028 09:34:17.104" level="INFO">Typing text 'MG#123' into text field 'id:ctl00_MainContent_fmwOrder_TextBox2'.</msg>
-<status status="PASS" starttime="20231028 09:34:17.104" endtime="20231028 09:34:17.136"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>name:ctl00$MainContent$fmwOrder$TextBox3</arg>
-<arg>Mumbai</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231028 09:34:17.136" level="INFO">Typing text 'Mumbai' into text field 'name:ctl00$MainContent$fmwOrder$TextBox3'.</msg>
-<status status="PASS" starttime="20231028 09:34:17.136" endtime="20231028 09:34:17.167"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>name:ctl00$MainContent$fmwOrder$TextBox5</arg>
-<arg>123456</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231028 09:34:17.167" level="INFO">Typing text '123456' into text field 'name:ctl00$MainContent$fmwOrder$TextBox5'.</msg>
-<status status="PASS" starttime="20231028 09:34:17.167" endtime="20231028 09:34:17.183"/>
-</kw>
-<kw name="Select Radio Button" library="SeleniumLibrary">
-<arg>ctl00$MainContent$fmwOrder$cardList</arg>
-<arg>Visa</arg>
-<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
-<msg timestamp="20231028 09:34:17.199" level="INFO">Selecting 'Visa' from radio button 'ctl00$MainContent$fmwOrder$cardList'.</msg>
-<status status="PASS" starttime="20231028 09:34:17.199" endtime="20231028 09:34:17.421"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>name:ctl00$MainContent$fmwOrder$TextBox6</arg>
-<arg>1234567890</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231028 09:34:17.421" level="INFO">Typing text '1234567890' into text field 'name:ctl00$MainContent$fmwOrder$TextBox6'.</msg>
-<status status="PASS" starttime="20231028 09:34:17.421" endtime="20231028 09:34:17.441"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id:ctl00_MainContent_fmwOrder_TextBox1</arg>
-<arg>12/99</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231028 09:34:17.442" level="INFO">Typing text '12/99' into text field 'id:ctl00_MainContent_fmwOrder_TextBox1'.</msg>
-<status status="PASS" starttime="20231028 09:34:17.441" endtime="20231028 09:34:17.462"/>
-</kw>
-<kw name="Click Link" library="SeleniumLibrary">
-<arg>Process</arg>
-<doc>Clicks a link identified by ``locator``.</doc>
-<msg timestamp="20231028 09:34:17.462" level="INFO">Clicking link 'Process'.</msg>
-<status status="PASS" starttime="20231028 09:34:17.462" endtime="20231028 09:34:18.429"/>
-</kw>
-<kw name="Click Link" library="SeleniumLibrary">
-<arg>View all orders</arg>
-<doc>Clicks a link identified by ``locator``.</doc>
-<msg timestamp="20231028 09:34:18.429" level="INFO">Clicking link 'View all orders'.</msg>
-<status status="PASS" starttime="20231028 09:34:18.429" endtime="20231028 09:34:19.387"/>
-</kw>
-<kw name="Page Should Contain" library="SeleniumLibrary">
-<arg>${customer_name}</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20231028 09:34:19.403" level="INFO">Current page contains text 'abcd'.</msg>
-<status status="PASS" starttime="20231028 09:34:19.387" endtime="20231028 09:34:19.403"/>
-</kw>
-<kw name="Table Row Should Contain" library="SeleniumLibrary">
-<arg>id:ctl00_MainContent_orderGrid_ctl02_OrderSelector</arg>
-<arg>1</arg>
-<arg>${customer_name}</arg>
-<doc>Verifies that table row contains text ``expected``.</doc>
-<status status="PASS" starttime="20231028 09:34:19.403" endtime="20231028 09:34:19.623"/>
-</kw>
-<status status="PASS" starttime="20231028 09:34:16.202" endtime="20231028 09:34:19.623"/>
-</iter>
-<iter>
-<var name="${i}">1</var>
-<kw name="Click Link" library="SeleniumLibrary">
-<arg>Order</arg>
-<doc>Clicks a link identified by ``locator``.</doc>
-<msg timestamp="20231028 09:34:19.623" level="INFO">Clicking link 'Order'.</msg>
-<status status="PASS" starttime="20231028 09:34:19.623" endtime="20231028 09:34:20.112"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>ctl00_MainContent_fmwOrder_txtQuantity</arg>
-<arg>2</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231028 09:34:20.112" level="INFO">Typing text '2' into text field 'ctl00_MainContent_fmwOrder_txtQuantity'.</msg>
-<status status="PASS" starttime="20231028 09:34:20.112" endtime="20231028 09:34:20.165"/>
-</kw>
-<kw name="Generate random numbers">
-<var>${Random_string}</var>
-<kw name="Generate Random String" library="String">
-<var>${Random_Number}</var>
-<arg>8</arg>
-<arg>0123456789</arg>
-<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
-<msg timestamp="20231028 09:34:20.166" level="INFO">${Random_Number} = 27052040</msg>
-<status status="PASS" starttime="20231028 09:34:20.165" endtime="20231028 09:34:20.166"/>
-</kw>
-<msg timestamp="20231028 09:34:20.166" level="INFO">${Random_string} = 27052040</msg>
-<status status="PASS" starttime="20231028 09:34:20.165" endtime="20231028 09:34:20.166"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>XPATH://input[@id='ctl00_MainContent_fmwOrder_txtName']</arg>
-<arg>${customer_name}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231028 09:34:20.166" level="INFO">Typing text 'abcd' into text field 'XPATH://input[@id='ctl00_MainContent_fmwOrder_txtName']'.</msg>
-<status status="PASS" starttime="20231028 09:34:20.166" endtime="20231028 09:34:20.186"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id:ctl00_MainContent_fmwOrder_TextBox2</arg>
-<arg>MG#123</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231028 09:34:20.188" level="INFO">Typing text 'MG#123' into text field 'id:ctl00_MainContent_fmwOrder_TextBox2'.</msg>
-<status status="PASS" starttime="20231028 09:34:20.186" endtime="20231028 09:34:20.207"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>name:ctl00$MainContent$fmwOrder$TextBox3</arg>
-<arg>Mumbai</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231028 09:34:20.207" level="INFO">Typing text 'Mumbai' into text field 'name:ctl00$MainContent$fmwOrder$TextBox3'.</msg>
-<status status="PASS" starttime="20231028 09:34:20.207" endtime="20231028 09:34:20.232"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>name:ctl00$MainContent$fmwOrder$TextBox5</arg>
-<arg>123456</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231028 09:34:20.239" level="INFO">Typing text '123456' into text field 'name:ctl00$MainContent$fmwOrder$TextBox5'.</msg>
-<status status="PASS" starttime="20231028 09:34:20.232" endtime="20231028 09:34:20.257"/>
-</kw>
-<kw name="Select Radio Button" library="SeleniumLibrary">
-<arg>ctl00$MainContent$fmwOrder$cardList</arg>
-<arg>Visa</arg>
-<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
-<msg timestamp="20231028 09:34:20.257" level="INFO">Selecting 'Visa' from radio button 'ctl00$MainContent$fmwOrder$cardList'.</msg>
-<status status="PASS" starttime="20231028 09:34:20.257" endtime="20231028 09:34:20.477"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>name:ctl00$MainContent$fmwOrder$TextBox6</arg>
-<arg>1234567890</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231028 09:34:20.477" level="INFO">Typing text '1234567890' into text field 'name:ctl00$MainContent$fmwOrder$TextBox6'.</msg>
-<status status="PASS" starttime="20231028 09:34:20.477" endtime="20231028 09:34:20.508"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id:ctl00_MainContent_fmwOrder_TextBox1</arg>
-<arg>12/99</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231028 09:34:20.508" level="INFO">Typing text '12/99' into text field 'id:ctl00_MainContent_fmwOrder_TextBox1'.</msg>
-<status status="PASS" starttime="20231028 09:34:20.508" endtime="20231028 09:34:20.533"/>
-</kw>
-<kw name="Click Link" library="SeleniumLibrary">
-<arg>Process</arg>
-<doc>Clicks a link identified by ``locator``.</doc>
-<msg timestamp="20231028 09:34:20.534" level="INFO">Clicking link 'Process'.</msg>
-<status status="PASS" starttime="20231028 09:34:20.533" endtime="20231028 09:34:21.219"/>
-</kw>
-<kw name="Click Link" library="SeleniumLibrary">
-<arg>View all orders</arg>
-<doc>Clicks a link identified by ``locator``.</doc>
-<msg timestamp="20231028 09:34:21.232" level="INFO">Clicking link 'View all orders'.</msg>
-<status status="PASS" starttime="20231028 09:34:21.219" endtime="20231028 09:34:22.239"/>
-</kw>
-<kw name="Page Should Contain" library="SeleniumLibrary">
-<arg>${customer_name}</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20231028 09:34:22.249" level="INFO">Current page contains text 'abcd'.</msg>
-<status status="PASS" starttime="20231028 09:34:22.246" endtime="20231028 09:34:22.249"/>
-</kw>
-<kw name="Table Row Should Contain" library="SeleniumLibrary">
-<arg>id:ctl00_MainContent_orderGrid_ctl02_OrderSelector</arg>
-<arg>1</arg>
-<arg>${customer_name}</arg>
-<doc>Verifies that table row contains text ``expected``.</doc>
-<status status="PASS" starttime="20231028 09:34:22.249" endtime="20231028 09:34:22.455"/>
-</kw>
-<status status="PASS" starttime="20231028 09:34:19.623" endtime="20231028 09:34:22.455"/>
-</iter>
-<status status="PASS" starttime="20231028 09:34:16.202" endtime="20231028 09:34:22.455"/>
-</for>
 <kw name="Get Element Count" library="SeleniumLibrary">
-<var>${ele_count}</var>
-<arg>xpath://*[@id="ctl00_MainContent_orderGrid"]/tbody/tr/td[2]</arg>
+<var>${items_on_page}</var>
+<arg>xpath=//div[@class='inventory_list']/div</arg>
 <doc>Returns the number of elements matching ``locator``.</doc>
-<msg timestamp="20231028 09:34:22.472" level="INFO">${ele_count} = 10</msg>
-<status status="PASS" starttime="20231028 09:34:22.455" endtime="20231028 09:34:22.472"/>
+<msg timestamp="20231028 10:02:43.568" level="INFO">${items_on_page} = 6</msg>
+<status status="PASS" starttime="20231028 10:02:43.562" endtime="20231028 10:02:43.568"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Total number of Items=${items_on_page}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231028 10:02:43.570" level="INFO">Total number of Items=6</msg>
+<status status="PASS" starttime="20231028 10:02:43.568" endtime="20231028 10:02:43.570"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${items_on_page} == 6</arg>
+<arg>Test Keyword 1</arg>
+<arg>ELSE IF</arg>
+<arg>${items_on_page} &lt; 6</arg>
+<arg>Test Keyword 2</arg>
+<arg>ELSE IF</arg>
+<arg>${items_on_page} &gt; 6</arg>
+<arg>Test Keyword 3</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Test Keyword 1">
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231028 10:02:48.593" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20231028 10:02:43.572" endtime="20231028 10:02:48.593"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
-<arg>ele count:${ele_count}</arg>
+<arg>Executed Keyword1 - Found Items as expected = 6</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20231028 09:34:22.473" endtime="20231028 09:34:22.473"/>
+<status status="PASS" starttime="20231028 10:02:48.593" endtime="20231028 10:02:48.593"/>
 </kw>
-<kw name="Create List" library="BuiltIn">
-<var>@{ele_count}</var>
-<doc>Returns a list containing given items.</doc>
-<msg timestamp="20231028 09:34:22.474" level="INFO">@{ele_count} = [ ]</msg>
-<status status="PASS" starttime="20231028 09:34:22.474" endtime="20231028 09:34:22.474"/>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231028 10:02:48.593" endtime="20231028 10:02:51.791"/>
 </kw>
-<for flavor="IN RANGE">
-<var>${i}</var>
-<value>2</value>
-<value>${ele_count}+2</value>
-<iter>
-<var name="${i}"/>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${text}</var>
-<arg>xpath:(//*[@id="ctl00_MainContent_orderGrid"]/tbody/tr)[${i}]/td[7]</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20231028 09:34:22.474" endtime="20231028 09:34:22.474"/>
+<status status="PASS" starttime="20231028 10:02:43.571" endtime="20231028 10:02:51.791"/>
 </kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${text}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" starttime="20231028 09:34:22.475" endtime="20231028 09:34:22.478"/>
+<status status="PASS" starttime="20231028 10:02:43.571" endtime="20231028 10:02:51.791"/>
 </kw>
-<if>
-<branch type="IF" condition="'${text}'==${customer_name}">
-<kw name="Select Checkbox" library="SeleniumLibrary">
-<arg>type:checkbox</arg>
-<doc>Selects the checkbox identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20231028 09:34:22.478" endtime="20231028 09:34:22.478"/>
-</kw>
-<kw name="Table Row Should Contain" library="SeleniumLibrary">
-<arg>xpath:(//*[@id="ctl00_MainContent_orderGrid"]/tbody/tr)[${i}]/td[2]</arg>
-<arg>2</arg>
-<arg>${customer_name}</arg>
-<doc>Verifies that table row contains text ``expected``.</doc>
-<status status="NOT RUN" starttime="20231028 09:34:22.479" endtime="20231028 09:34:22.479"/>
-</kw>
-<status status="NOT RUN" starttime="20231028 09:34:22.478" endtime="20231028 09:34:22.479"/>
-</branch>
-<status status="NOT RUN" starttime="20231028 09:34:22.478" endtime="20231028 09:34:22.479"/>
-</if>
-<kw name="Close the browser at the end">
-<status status="NOT RUN" starttime="20231028 09:34:22.479" endtime="20231028 09:34:22.479"/>
-</kw>
-<status status="NOT RUN" starttime="20231028 09:34:22.474" endtime="20231028 09:34:22.479"/>
-</iter>
-<msg timestamp="20231028 09:34:22.479" level="FAIL">FOR loop must have closing END.</msg>
-<status status="FAIL" starttime="20231028 09:34:22.474" endtime="20231028 09:34:22.479"/>
-</for>
-<status status="FAIL" starttime="20231028 09:34:16.202" endtime="20231028 09:34:22.480">FOR loop must have closing END.</status>
+<tag>Smoke</tag>
+<status status="PASS" starttime="20231028 10:02:36.454" endtime="20231028 10:02:51.791"/>
 </test>
 <doc>Suite description</doc>
-<status status="FAIL" starttime="20231028 09:34:05.965" endtime="20231028 09:34:22.481"/>
+<status status="PASS" starttime="20231028 10:02:36.170" endtime="20231028 10:02:51.791"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">DEBUG</stat>
+<stat pass="1" fail="0" skip="0">Smoke</stat>
 </tag>
 <suite>
-<stat pass="1" fail="1" skip="0" id="s1" name="Select Checkbox BasedOn MatchingPattern">Select Checkbox BasedOn MatchingPattern</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="IfElseDemo">IfElseDemo</stat>
 </suite>
 </statistics>
 <errors>
