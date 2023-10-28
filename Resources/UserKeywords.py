@@ -22,3 +22,9 @@ def get_matching_name(string, list_names):
     for name in list_names:
         if string in name:
             return name
+
+
+@keyword("xpath creator")
+def crete_xpath(uservalue, index):
+    xpath = "(//*[text()='" + uservalue + "'])[" + str(index) + "]//..//td//input"
+    return xpath
